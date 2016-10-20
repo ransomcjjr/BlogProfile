@@ -1,3 +1,0 @@
-Private.config
-Web.config
-Startup.Auth.cs
