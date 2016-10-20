@@ -1,0 +1,73 @@
+﻿@model IPagedList<CJRProfileBlog.Models.BlogPost>
+@using System.Text.RegularExpressions;
+@using PagedList;
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+}
+
+<head>
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+</head>
+<div class="whitebkg">
+    <div class="text-center">
+        <div>&emsp;</div>
+        <h2>Blog Posts</h2>
+        <p>@Html.ActionLink("CREATE", "Create")</p>
+</div>
+    <div class="btnpadding">
+        <form action="@Url.Action("Index")">
+            <input type="text" height="25" value="Search" name="query" />&emsp;<input type="image" name="search" src="~/img/Searchsmall2.png" alt="Search" />
+        </form>
+    </div>
+   <div>&emsp;</div>
+    <table class="table">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @{ var shortDesc = item.Body;
+                        var result = "";
+                        if (shortDesc.Length > 150)
+                        {
+                            var sDesc = shortDesc.Substring(0, 150);
+                            var splitDesc = sDesc.Split(' ');
+                            var arrLenghth = (splitDesc.Length - 1);
+                            Array.Clear(splitDesc, arrLenghth, 1);
+                            result = String.Join(" ", splitDesc);
+                            result = Regex.Replace(result, "<.*?>|&.*?;", string.Empty);
+                            result = result + "...";
+                        }
+                        else
+                        {
+                            result = shortDesc;
+                            result = Regex.Replace(result, "<.*?>|&.*?;", string.Empty);
+                        }
+
+                    }
+
+                    <p><img src="@Url.Content(item.MediaURL)" />
+                </td>
+                <td>
+                    <p>
+                        <a href="@Url.Action("Details", "BlogPosts", new { slug = item.Slug })">
+                            <h3 class="post-title">
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </h3>
+                        </a>
+                    </p>
+
+                    <p class="pcolor">@result<span class="fontred"> @Html.ActionLink("(more)", "Details", new { slug = item.Slug })</span></p>
+
+                    <p>@Html.DisplayNameFor(model => item.Created):@Html.DisplayFor(modelItem => item.Created)&emsp;@Html.DisplayNameFor(model => item.Updated):@Html.DisplayFor(modelItem => item.Updated)</p>
+                </td>
+
+        </tr>
+                        }
+    </table>
+    <div>
+        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page}))
+    </div>
+</div>

@@ -1,0 +1,43 @@
+﻿@model CJRProfileBlog.Models.Comments
+
+@{
+    ViewBag.Title = "Create";
+}
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal whitebkg text-center">
+        <div class="text-center">
+            <h3>Add Comment</h3>
+            <h4>@ViewBag.PostTitle.Title</h4>
+            @Html.ActionLink("Back to Post", "Details", "BlogPosts", new { slug = ViewBag.PostTitle.Slug }, null)
+        </div>
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class="col-md-9">
+                @Html.EditorFor(model => model.Body, new { htmlAttributes = new { @class = "form-control", id = "Ed", rows = "10" } })
+                @Html.ValidationMessageFor(model => model.Body, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Add Comment" class="btn btn-warning btn-block" />
+                <input type="hidden" name="PostId" value="@ViewBag.PostTitle.Id" />
+            </div>
+        </div>
+    </div>
+}
+<script src="~/Scripts/tinymce/tinymce.min.js"></script>
+<script src="~/Scripts/tinymce/jquery.tinymce.min.js"></script>
+<script>
+        $(function() {
+            $('#Ed').tinymce({});
+        })
+</script>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
