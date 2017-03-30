@@ -423,7 +423,7 @@ namespace CJRProfileBlog.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "BlogPosts");
         }
 
         //
@@ -480,7 +480,7 @@ namespace CJRProfileBlog.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "BlogPosts");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult

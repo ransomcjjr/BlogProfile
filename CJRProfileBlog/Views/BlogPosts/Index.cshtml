@@ -18,7 +18,7 @@
 </div>
     <div class="btnpadding">
         <form action="@Url.Action("Index")">
-            <input type="text" height="25" value="Search" name="query" />&emsp;<input type="image" name="search" src="~/img/Searchsmall2.png" alt="Search" />
+            <input type="text" height="25" value="Date From" name="query" />&emsp;<input type="image" name="search" src="~/img/Searchsmall2.png" alt="Search" />
         </form>
     </div>
    <div>&emsp;</div>
@@ -47,7 +47,7 @@
 
                     }
 
-                    <p><img src="@Url.Content(item.MediaURL)" />
+                    <p><img id="imgResize" src="@Url.Content(item.MediaURL)" />
                 </td>
                 <td>
                     <p>

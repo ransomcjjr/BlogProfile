@@ -261,7 +261,11 @@
     <Content Include="img\168.jpg" />
     <Content Include="img\AjaxLoader.gif" />
     <Content Include="img\bg-body.jpg" />
-    <Content Include="img\blog\default.jpg" />
+    <Content Include="img\blog\100_1386.JPG" />
+    <Content Include="img\blog\adjusted.JPG" />
+    <Content Include="img\blog\cjr-motorcycle.JPG" />
+    <Content Include="img\blog\dashboard5.jpg" />
+    <Content Include="img\blog\John_Main.jpg" />
     <Content Include="img\content\thumbnail1.jpg" />
     <Content Include="img\content\thumbnail10.jpg" />
     <Content Include="img\content\thumbnail11.jpg" />
@@ -270,6 +274,7 @@
     <Content Include="img\content\thumbnail6.jpg" />
     <Content Include="img\content\thumbnail7.jpg" />
     <Content Include="img\content\thumbnail8.jpg" />
+    <Content Include="img\google.png" />
     <Content Include="img\grabbing.png" />
     <Content Include="img\Mountain.jpg" />
     <Content Include="img\Searchsmall.png" />
@@ -442,8 +447,10 @@
     <Content Include="Scripts\tinymce\langs\readme.md" />
     <Content Include="Views\Account\ResendEmailConfirmation.cshtml" />
     <Content Include="Views\Account\ConfirmationSent.cshtml" />
-    <None Include="Views\Account\Login.cshtml" />
-    <None Include="Views\Account\Register.cshtml" />
+    <None Include="Properties\PublishProfiles\cjransom-blog - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\cjransom-blog - Web Deploy.pubxml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -504,8 +511,6 @@
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login-old.cshtml" />
-    <Content Include="Views\Account\RegisterOld.cshtml" />
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\SendCode.cshtml" />

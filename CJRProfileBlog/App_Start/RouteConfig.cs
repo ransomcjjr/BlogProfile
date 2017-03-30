@@ -21,7 +21,7 @@ namespace CJRProfileBlog
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "BlogPosts", action = "index", id = UrlParameter.Optional }
+                defaults: new { controller = "BlogPosts", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

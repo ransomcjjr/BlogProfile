@@ -84,8 +84,8 @@ C:\Users\ranso\documents\visual studio 2015\Projects\CJRProfileBlog\CJRProfileBl
 C:\Users\ranso\documents\visual studio 2015\Projects\CJRProfileBlog\CJRProfileBlog\bin\SendGridMail.dll
 C:\Users\ranso\documents\visual studio 2015\Projects\CJRProfileBlog\CJRProfileBlog\bin\System.Net.Http.Formatting.dll
 C:\Users\ranso\documents\visual studio 2015\Projects\CJRProfileBlog\CJRProfileBlog\bin\System.Net.Http.Formatting.xml
-C:\Users\ranso\documents\visual studio 2015\Projects\CJRProfileBlog\CJRProfileBlog\obj\Debug\CJRProfileBlog.csprojResolveAssemblyReference.cache
 C:\Users\ranso\documents\visual studio 2015\Projects\CJRProfileBlog\CJRProfileBlog\bin\PagedList.dll
 C:\Users\ranso\documents\visual studio 2015\Projects\CJRProfileBlog\CJRProfileBlog\bin\PagedList.Mvc.dll
 C:\Users\ranso\documents\visual studio 2015\Projects\CJRProfileBlog\CJRProfileBlog\bin\PagedList.xml
 C:\Users\ranso\documents\visual studio 2015\Projects\CJRProfileBlog\CJRProfileBlog\bin\PagedList.Mvc.xml
+C:\Users\ranso\documents\visual studio 2015\Projects\CJRProfileBlog\CJRProfileBlog\obj\Debug\CJRProfileBlog.csprojResolveAssemblyReference.cache
